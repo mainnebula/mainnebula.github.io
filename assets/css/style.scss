@@ -1,31 +1,31 @@
 .brand-logo {
-  margin-left: 5px;
-  margin-top: 5px;
+  margin-left: 0px;
+  margin-top: -10px;
 }
 
 .barba-old-container {
-  position: absolute;
+  position: flex;
   z-index: 5;
   visibility: visible !important;
-  top: 0px;
-  left: 0px;
+  top: 100px;
+  left: 50px;
   width:100%;
   background-color: transparent;
   overflow-y: hidden !important;
 }
 
 .barba-new-container {
-  position: absolute;
+  position: flex;
   overflow: hidden !important;
   // visibility: visible !important;
   z-index: 0;
   width:100%;
-  top: 0px;
+  top: -100px;
   left: 0px;
 }
 
 .barba-new-container-back {
-  position: absolute;
+  position: flex;
   z-index: 5;
   visibility: visible !important;
   top: 0px;
@@ -52,8 +52,9 @@
   }
 
   .project-img {
-    width: 500px;
-    height: 300px;
+    width: fit-content;
+    height: flex;
+    display: flex;
   }
 
   .project-wrapper {
@@ -63,7 +64,7 @@
   .card {
     width: 31.3%;
     height: 520px;
-    display: inline-block;
+    display: flex;
     float: left;
     margin: 1% 1% 1% 1%;
   }
@@ -115,7 +116,7 @@ nav {
 
 .about-me .bio {
   color: white;
-  padding: 2%;
+  padding: 50%;
 }
 
 .technologies {

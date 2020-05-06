@@ -1,5 +1,3 @@
-# levytsroman.github.io
-Personal portfolio page, aspiring jekyll theme.
 
 # To get started: 
 

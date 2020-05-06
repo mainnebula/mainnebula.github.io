@@ -1,24 +1,24 @@
 projects:
   url: /projects
   heading: Projects
-  words: A list of projects and experiments
+  words: Take a look at some of my latest projects and experiments
   class: m7 projects
   border: projects
 about:
   url: /about
   heading: Me
-  words: Hi, I'm a programmer
+  words: Hi, I'm a product manager, hacker, and musician
   class: m5 about
   border: about
 resume:
   url: /resume
   heading: Resume
   words: Check out or download my resume
-  class: m6 algorithms
+  class: m5 algorithms
   border: algorithms
 contact:
   url: /contact
   heading: Contact
-  words: Feel free to shoot me an email
-  class: m6 contact
+  words: Feel free to reach out!
+  class: m7 contact
   border: contact
