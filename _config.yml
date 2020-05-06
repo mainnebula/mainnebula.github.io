@@ -21,7 +21,7 @@ description: >
 about_me: >
   I'm a curious and constant learner who grew up in the suburbs of Kansas and ventured out to New York City in search of congruence between my personal and professional goals. I have nearly 5 years of Project Management experience, 2.5 years of Product Managment experience, and have spent the last year sharpening my technical abilities. 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://github.com/mainnebula" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://mainnebula.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 linked_in_link: "https://www.linkedin.com/in/robert-keenan/"
 github_link: "https://github.com/mainnebula"
 twitter_username: ""

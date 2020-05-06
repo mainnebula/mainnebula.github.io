@@ -14,12 +14,12 @@ Make sure Ruby is installed on your computer, for detailed information on how ch
 3) clone the repo by running in your bash terminal/cmd, make sure to change url below to url of your own fork.
 
 ```
-git clone https://github.com/LevytsRoman/levytsroman.github.io.git
+git clone https://github.com/mainnbule.github.io
 ```
 
 4) go into the folder with 
 ```
-cd levytsroman.github.io
+cd mainnebula.github.io
 ```
 
 5) run 
