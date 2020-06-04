@@ -39,7 +39,7 @@
                 ]
   cover: /assets/images/project_covers/drummachine.png
   images: [
-    '/assets/images/project_images/DumMachine/Drummachine.png',
+    '/assets/images/project_images/DrumMachine/Drummachine.png',
     '/assets/images/project_images/DrumMachine/FlexBox.png',
     '/assets/images/project_images/DrumMachine/Tapas.png']
   
