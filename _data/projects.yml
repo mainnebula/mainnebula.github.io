@@ -24,7 +24,7 @@
                  '''',]
   cover: /assets/images/project_covers/fabcover.jpg
   images: [    
-    '/assets/images/project_images/fab/fab.png',
+    '/assets/images/project_images/fab/FAB.png',
 ]
 
 - id: 3
@@ -39,7 +39,7 @@
                 ]
   cover: /assets/images/project_covers/drummachine.png
   images: [
-    '/assets/images/project_images/drummachine/drummachine.png',
+    '/assets/images/project_images/drummachine/Drummachine.png',
     '/assets/images/project_images/drummachine/FlexBox.png',
     '/assets/images/project_images/drummachine/Tapas.png']
   
