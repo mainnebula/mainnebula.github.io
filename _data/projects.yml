@@ -39,9 +39,9 @@
                 ]
   cover: /assets/images/project_covers/drummachine.png
   images: [
-    '/assets/images/project_images/drummachine/Drummachine.png',
-    '/assets/images/project_images/drummachine/FlexBox.png',
-    '/assets/images/project_images/drummachine/Tapas.png']
+    '/assets/images/project_images/Dummachine/Drummachine.png',
+    '/assets/images/project_images/Drummachine/FlexBox.png',
+    '/assets/images/project_images/Drummachine/Tapas.png']
   
 - id: 4
   title: 3D Printed Astrophotography Gimble (WIP)
