@@ -24,7 +24,7 @@
                  '''',]
   cover: /assets/images/project_covers/fabcover.jpg
   images: [    
-    '/assets/images/project_images/fab/FAB.png',
+    '/assets/images/project_images/FAB/FAB.png',
 ]
 
 - id: 3
@@ -39,9 +39,9 @@
                 ]
   cover: /assets/images/project_covers/drummachine.png
   images: [
-    '/assets/images/project_images/Dummachine/Drummachine.png',
-    '/assets/images/project_images/Drummachine/FlexBox.png',
-    '/assets/images/project_images/Drummachine/Tapas.png']
+    '/assets/images/project_images/DumMachine/Drummachine.png',
+    '/assets/images/project_images/DrumMachine/FlexBox.png',
+    '/assets/images/project_images/DrumMachine/Tapas.png']
   
 - id: 4
   title: 3D Printed Astrophotography Gimble (WIP)
