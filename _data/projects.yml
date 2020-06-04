@@ -9,11 +9,11 @@
                 reactJs-plain]
   cover: /assets/images/project_covers/trusatcover5.jpg
   images: [
-    '/assets/images/project_images/trusat/Trusat5.gif',
-    '/assets/images/project_images/trusat/Trusat6.jpg',
+    '/assets/images/project_images/trusat/TruSat5.gif',
+    '/assets/images/project_images/trusat/TruSat6.jpg',
     '/assets/images/project_images/trusat/TruSat4.png',
-    '/assets/images/project_images/trusat/Trusat1.jpg',
-    '/assets/images/project_images/trusat/Trusat7.jpg']
+    '/assets/images/project_images/trusat/TruSat1.jpg',
+    '/assets/images/project_images/trusat/TruSat7.jpg']
 
 - id: 2
   title: The Foundation for Art and Blockchain 
