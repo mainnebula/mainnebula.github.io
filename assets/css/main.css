@@ -953,6 +953,7 @@ button.fill:before {
   right: 0;
   top: 100%;
   z-index: -1;
+  transition: 0.2s ease-in;
   -webkit-transition: top 0.09s ease-in;
 }
 
