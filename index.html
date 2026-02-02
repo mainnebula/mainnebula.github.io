@@ -177,6 +177,7 @@ details summary::marker{content:''}
 details summary::before{content:'▸ ';color:var(--dim)}
 details[open] summary::before{content:'▾ '}
 details summary:hover{background:var(--proj-bg)}
+details summary .stat{color:var(--dim);font-size:12px;font-weight:400}
 .proj{padding:8px 8px 16px 24px;font-size:13px}
 .proj-img{
   width:100%;max-width:320px;border:1px solid var(--border);
@@ -370,10 +371,21 @@ details summary:hover{background:var(--proj-bg)}
     <div class="divider">─── projects ───</div>
 
     <details>
-      <summary>Quill</summary>
+      <summary>Lightbox <span class="stat">· 500+ downloads</span></summary>
+      <div class="proj">
+        <img src="assets/images/logos/lightbox.png" alt="Lightbox" class="proj-logo" loading="lazy">
+        <p>Flight recorder for AI agents. Record every tool call. Inspect any session. Prove what happened.</p>
+        <div class="proj-links">
+          <a href="https://uselightbox.app">website</a>
+        </div>
+      </div>
+    </details>
+
+    <details>
+      <summary>Quill <span class="stat">· 37k+ downloads · 70+ GitHub stars</span></summary>
       <div class="proj">
         <p>CLI tool that uses LLMs to generate comprehensive README files for software projects. Built with Python, powered by Google Gemini.</p>
-        <p class="tech">Python · Gemini API · 30k+ downloads · 70+ GitHub stars</p>
+        <p class="tech">Python · Gemini API</p>
         <div class="proj-links">
           <a href="https://pypi.org/project/quill/">pypi</a>
           <a href="https://github.com/usedispatch/Quill">github</a>
@@ -382,23 +394,12 @@ details summary:hover{background:var(--proj-bg)}
     </details>
 
     <details>
-      <summary>RangePro</summary>
+      <summary>RangePro <span class="stat">· 20k+ users</span></summary>
       <div class="proj">
         <img src="assets/images/logos/rangepro.png" alt="RangePro" class="proj-logo" loading="lazy">
         <p>Golf training simulator designed to help players practice in realistic match conditions.</p>
         <div class="proj-links">
           <a href="https://rangepro.app">website</a>
-        </div>
-      </div>
-    </details>
-
-    <details>
-      <summary>Lightbox</summary>
-      <div class="proj">
-        <img src="assets/images/logos/lightbox.png" alt="Lightbox" class="proj-logo" loading="lazy">
-        <p>Flight recorder for AI agents. Record every tool call. Inspect any session. Prove what happened.</p>
-        <div class="proj-links">
-          <a href="https://uselightbox.app">website</a>
         </div>
       </div>
     </details>
