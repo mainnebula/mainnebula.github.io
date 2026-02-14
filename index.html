@@ -253,13 +253,8 @@ details summary .stat{color:var(--dim);font-size:12px;font-weight:400}
 
 /* ── stats panel ── */
 .stats-wrap{position:relative}
-.stats-toggle{
-  background:none;border:none;font-family:inherit;font-size:11px;
-  color:var(--dim);cursor:pointer;padding:0;line-height:inherit
-}
-.stats-toggle:hover{color:var(--text)}
 .stats-panel{
-  display:none;position:absolute;bottom:calc(100% + 8px);right:0;
+  display:none;position:absolute;top:calc(100% + 4px);right:0;
   background:var(--bg);border:1px solid var(--border);border-radius:6px;
   box-shadow:0 4px 12px rgba(0,0,0,.15);padding:8px 12px;
   font-size:11px;white-space:nowrap;z-index:100;min-width:160px
@@ -305,6 +300,15 @@ details summary .stat{color:var(--dim);font-size:12px;font-weight:400}
       <span>robertkeenan.txt – Notepad</span>
     </div>
     <div class="titlebar-buttons">
+      <span class="stats-wrap">
+        <button id="btn-stats" aria-label="Page stats" title="Page stats">⚡</button>
+        <div class="stats-panel" id="stats-panel">
+          <div class="stats-row"><span class="stats-label">loaded</span><span id="stat-time">—</span></div>
+          <div class="stats-row"><span class="stats-label">weight</span><span id="stat-size">—</span></div>
+          <div class="stats-row"><span class="stats-label">requests</span><span id="stat-reqs">—</span></div>
+          <div class="stats-row"><span class="stats-label">framework</span><span>none</span></div>
+        </div>
+      </span>
       <button id="btn-min" aria-label="Minimize">─</button>
       <button id="btn-max" aria-label="Maximize">□</button>
       <button id="btn-close" class="close-btn" aria-label="Close">×</button>
@@ -560,15 +564,7 @@ details summary .stat{color:var(--dim);font-size:12px;font-weight:400}
     <button class="theme-btn" id="status-theme" aria-label="Toggle dark mode"></button>
     <div class="statusbar-right">
       <span id="scroll-pct">0%</span>
-      <span class="stats-wrap">
-        <button class="stats-toggle" id="stats-toggle" aria-label="Page stats">UTF-8</button>
-        <div class="stats-panel" id="stats-panel">
-          <div class="stats-row"><span class="stats-label">loaded</span><span id="stat-time">—</span></div>
-          <div class="stats-row"><span class="stats-label">weight</span><span id="stat-size">—</span></div>
-          <div class="stats-row"><span class="stats-label">requests</span><span id="stat-reqs">—</span></div>
-          <div class="stats-row"><span class="stats-label">framework</span><span>none</span></div>
-        </div>
-      </span>
+      <span>UTF-8</span>
     </div>
   </div>
   <div class="toast" id="toast"></div>
@@ -753,7 +749,7 @@ details summary .stat{color:var(--dim);font-size:12px;font-weight:400}
   });
 
   /* ── stats panel ── */
-  var statsBtn=document.getElementById('stats-toggle'),
+  var statsBtn=document.getElementById('btn-stats'),
       statsPanel=document.getElementById('stats-panel');
   statsBtn.addEventListener('click',function(e){
     e.stopPropagation();
