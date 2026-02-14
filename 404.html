@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>404 – File Not Found</title>
+<link rel="icon" href="/assets/images/favicon.png">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --bg:#fff;--text:#1e1e1e;--dim:#666;--chrome:#f5f5f5;
+  --chrome-h:#e8e8e8;--border:#e0e0e0;--link:#0066cc;
+  --link-h:#004499;--shadow:0 2px 10px rgba(0,0,0,.08),0 0 1px rgba(0,0,0,.1)
+}
+@media(prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#1e1e1e;--text:#ccc;--dim:#888;--chrome:#2d2d2d;
+    --chrome-h:#3a3a3a;--border:#404040;--link:#6cb6ff;
+    --link-h:#8ccbff;--shadow:0 2px 10px rgba(0,0,0,.3),0 0 1px rgba(0,0,0,.4)
+  }
+}
+[data-theme="dark"]{
+  --bg:#1e1e1e;--text:#ccc;--dim:#888;--chrome:#2d2d2d;
+  --chrome-h:#3a3a3a;--border:#404040;--link:#6cb6ff;
+  --link-h:#8ccbff;--shadow:0 2px 10px rgba(0,0,0,.3),0 0 1px rgba(0,0,0,.4)
+}
+[data-theme="light"]{
+  --bg:#fff;--text:#1e1e1e;--dim:#666;--chrome:#f5f5f5;
+  --chrome-h:#e8e8e8;--border:#e0e0e0;--link:#0066cc;
+  --link-h:#004499;--shadow:0 2px 10px rgba(0,0,0,.08),0 0 1px rgba(0,0,0,.1)
+}
+
+html{height:100%}
+body{
+  font-family:ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,'DejaVu Sans Mono',monospace;
+  font-size:14px;line-height:1.6;color:var(--text);background:var(--chrome);
+  display:flex;justify-content:center;align-items:center;
+  min-height:100vh;padding:40px 20px
+}
+a{color:var(--link);text-decoration:none}
+a:hover{color:var(--link-h);text-decoration:underline}
+
+.notepad{
+  width:100%;max-width:480px;background:var(--bg);
+  border:1px solid var(--border);border-radius:8px;
+  box-shadow:var(--shadow);overflow:hidden;
+  animation:fadeIn .3s ease
+}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.titlebar{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:8px 12px;background:var(--chrome);border-bottom:1px solid var(--border);
+  user-select:none;-webkit-user-select:none
+}
+.titlebar-left{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--dim)}
+.titlebar-icon{width:16px;height:16px;border-radius:2px}
+.titlebar-buttons{display:flex;gap:2px}
+.titlebar-buttons span{
+  width:36px;height:28px;font-size:12px;color:var(--dim);
+  display:flex;align-items:center;justify-content:center
+}
+
+.content{padding:32px 28px;text-align:center}
+.error-code{font-size:48px;font-weight:700;letter-spacing:-1px;margin-bottom:8px}
+.error-msg{color:var(--dim);font-size:13px;margin-bottom:24px}
+.error-detail{
+  background:var(--chrome);border:1px solid var(--border);border-radius:4px;
+  padding:12px 16px;font-size:12px;color:var(--dim);margin-bottom:24px;
+  text-align:left
+}
+.home-link{
+  display:inline-block;padding:6px 16px;border-radius:4px;
+  background:var(--link);color:#fff;font-family:inherit;font-size:13px;
+  text-decoration:none;transition:background .15s
+}
+.home-link:hover{background:var(--link-h);color:#fff;text-decoration:none}
+
+.statusbar{
+  display:flex;justify-content:space-between;align-items:center;padding:4px 12px;
+  background:var(--chrome);border-top:1px solid var(--border);
+  font-size:11px;color:var(--dim);user-select:none
+}
+
+@media(max-width:600px){
+  body{padding:0;background:var(--bg)}
+  .notepad{border:none;border-radius:0;box-shadow:none;max-width:100%}
+  .content{padding:24px 16px}
+}
+</style>
+</head>
+<body>
+
+<div class="notepad">
+  <div class="titlebar">
+    <div class="titlebar-left">
+      <img src="/assets/images/favicon.png" alt="" class="titlebar-icon" width="16" height="16">
+      <span>404.txt – Notepad</span>
+    </div>
+    <div class="titlebar-buttons">
+      <span>─</span>
+      <span>□</span>
+      <span>×</span>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="error-code">404</div>
+    <p class="error-msg">File Not Found</p>
+    <div class="error-detail">
+      The file you requested does not exist.<br>
+      Check the path and try again.
+    </div>
+    <a href="/" class="home-link">← Open robertkeenan.txt</a>
+  </div>
+
+  <div class="statusbar">
+    <span>Error</span>
+    <span>UTF-8</span>
+  </div>
+</div>
+
+<script>
+var saved=localStorage.getItem('theme');
+if(saved)document.documentElement.setAttribute('data-theme',saved);
+</script>
+</body>
+</html>
