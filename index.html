@@ -14,6 +14,9 @@
 <meta name="twitter:title" content="Robert Keenan">
 <meta name="twitter:description" content="Product leader with 8+ years building and scaling data-intensive, AI-enabled platforms.">
 <link rel="icon" href="assets/images/favicon.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Robert Keenan","url":"https://robertkeenan.xyz","jobTitle":"Head of Product","worksFor":{"@type":"Organization","name":"SkyMapper"},"sameAs":["https://github.com/mainnebula","https://www.linkedin.com/in/robert-keenan/"]}
+</script>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 
@@ -157,7 +160,11 @@ body.maximized{padding:0}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
 /* ── content ── */
-.content{flex:1;padding:32px 28px;overflow-y:auto}
+.content{flex:1;padding:32px 28px;overflow-y:auto;position:relative}
+.content::after{
+  content:'';display:block;height:20px;position:sticky;bottom:0;
+  background:linear-gradient(transparent,var(--bg));pointer-events:none;margin-top:-20px
+}
 .bio,.proj,.exp-bullets{
   font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif
 }
@@ -170,6 +177,8 @@ body.maximized{padding:0}
 }
 h1{font-size:20px;font-weight:700;margin-bottom:3px;font-family:inherit;letter-spacing:-.3px}
 .tagline{color:var(--dim);font-size:13px}
+.tagline a{color:inherit;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
+.tagline a:hover{color:var(--link);text-decoration-style:solid}
 .bio{margin-bottom:20px;font-size:14px;line-height:1.7}
 .links{display:flex;gap:8px;margin-bottom:28px;flex-wrap:wrap;font-size:13px}
 .links a{
@@ -255,6 +264,18 @@ details summary .stat{color:var(--dim);font-size:12px;font-weight:400}
   .skill-row{flex-wrap:wrap}
   .skill-cat{width:auto;min-width:10ch}
 }
+
+/* ── print ── */
+@media print{
+  body{padding:0;background:#fff}
+  .notepad{border:none;box-shadow:none;border-radius:0;max-width:100%;min-height:0;animation:none}
+  .titlebar,.menubar,.statusbar,.toast,.dialog-overlay,.reopen{display:none!important}
+  .content{overflow:visible;padding:20px 0}
+  .content::after{display:none}
+  .links a{background:none;border:none;padding:0}
+  .proj-links a{background:none;padding:0}
+  .proj{border-left:none;margin-left:0;padding-left:24px}
+}
 </style>
 </head>
 <body>
@@ -283,7 +304,7 @@ details summary .stat{color:var(--dim);font-size:12px;font-weight:400}
     <div class="menu-wrap">
       <span class="menu-item" data-menu="edit" role="button" tabindex="0">Edit</span>
       <div class="dropdown" id="edit-dropdown" role="menu">
-        <button id="btn-copy-email" role="menuitem">Copy Email<span class="shortcut">&#8984;C</span></button>
+        <button id="btn-copy-email" role="menuitem">Copy Email</button>
         <button id="btn-copy-url" role="menuitem">Copy Link</button>
       </div>
     </div>
@@ -312,11 +333,11 @@ details summary .stat{color:var(--dim);font-size:12px;font-weight:400}
       <img src="assets/images/avatar.png" alt="Robert Keenan" class="avatar" width="72" height="72">
       <div>
         <h1>Robert Keenan</h1>
-        <p class="tagline">product leader · builder · hacker · musician</p>
+        <p class="tagline">product leader · builder · hacker · <a href="https://youtu.be/gQvv7W0xSqM?si=2kHiDWAljXaeipiN&t=2702" target="_blank" rel="noopener">musician</a></p>
       </div>
     </div>
 
-    <p class="bio">Product leader with 8+ years building and scaling data-intensive, AI-enabled platforms from seed through acquisition. Proven at owning portfolio roadmaps, aligning engineering and commercial teams, and delivering enterprise products in regulated environments.</p>
+    <p class="bio">I build and ship data platforms and AI products — 8+ years from seed stage through acquisition. Product leader by title, builder by habit.</p>
 
     <div class="links">
       <a href="https://github.com/mainnebula">→ github</a>
@@ -683,6 +704,27 @@ details summary .stat{color:var(--dim);font-size:12px;font-weight:400}
   });
   reopen.addEventListener('click',function(){
     np.style.display='';reopen.classList.remove('show')
+  });
+
+  /* ── keyboard shortcuts ── */
+  document.addEventListener('keydown',function(e){
+    if((e.metaKey||e.ctrlKey)&&e.key==='p'){
+      e.preventDefault();window.print()
+    }
+  });
+
+  /* ── print: open all details ── */
+  var printState=[];
+  window.addEventListener('beforeprint',function(){
+    printState=[];
+    document.querySelectorAll('details').forEach(function(d){
+      printState.push(d.open);d.open=true
+    })
+  });
+  window.addEventListener('afterprint',function(){
+    document.querySelectorAll('details').forEach(function(d,i){
+      d.open=printState[i]||false
+    })
   });
 
   /* ── scroll % ── */
