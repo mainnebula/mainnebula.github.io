@@ -161,10 +161,7 @@ body.maximized{padding:0}
 
 /* ── content ── */
 .content{flex:1;padding:32px 28px;overflow-y:auto;position:relative}
-.content::after{
-  content:'';display:block;height:20px;position:sticky;bottom:0;
-  background:linear-gradient(transparent,var(--bg));pointer-events:none;margin-top:-20px
-}
+.content::after{display:none}
 .bio,.proj,.exp-bullets{
   font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif
 }
